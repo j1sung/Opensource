@@ -3,22 +3,20 @@ from django.contrib import messages
 from myapp.models import Todo
 from myapp.forms import TodoForm
 from django.http import HttpResponseRedirect
-from django.contrib.auth.decorators import login_required
 
 
-@login_required
 def index(request):
     if request.method == 'POST':
         task = request.POST.get('task')
         if task:
-            Todo.objects.create(task=task, user=request.user)
+            Todo.objects.create(task=task)
             messages.success(request, 'New task added successfully.')
         else:
             messages.error(request, 'Task is empty.')
         return HttpResponseRedirect(request.path_info)
     else:
-        todo_list_not_completed = Todo.objects.filter(user=request.user, is_completed=False)
-        todo_list_completed = Todo.objects.filter(user=request.user, is_completed=True)
+        todo_list_not_completed = Todo.objects.filter(is_completed=False)
+        todo_list_completed = Todo.objects.filter(is_completed=True)
         return render(request, 'myapp/index.html', {
             'todo_list_not_completed': todo_list_not_completed,
             'todo_list_completed': todo_list_completed,
