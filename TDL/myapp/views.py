@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from myapp.models import Todo
 from myapp.forms import TodoForm
-from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
@@ -63,19 +62,6 @@ def delete(request, pk):
     todo.delete()
     messages.success(request, 'Task deleted successfully.')
     return redirect('index')
-
-
-def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
-            return redirect('login')
-    else:
-        form = UserCreationForm()
-    return render(request, 'myapp/register.html', {'form': form})
 
 
 def change_status(request, pk):
