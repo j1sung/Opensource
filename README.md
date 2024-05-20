@@ -1,9 +1,9 @@
 # Study OpensourceSW
 ### DKU 소프트웨어학과 32202546 안지성
-#### 1. Django 과제 -> TDL(To-do List App) 구현
+### 1. Django 과제 -> TDL(To-do List App) 구현
   - **테스트:** ```python manage.py runserver``` -> localhost:8000 접속
 
-#### 2. Docker 과제 -> Django To-do List App을 Docker 컨테이너로 구현
+### 2. Docker 과제 -> Django To-do List App을 Docker 컨테이너로 구현
 **1) 단일 컨테이너로 구현**
 ```
 TDL1/
