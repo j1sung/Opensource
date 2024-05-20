@@ -5,6 +5,37 @@
 
 #### Docker 과제 -> Django To-do List App을 Docker 컨테이너로 구현
 **1) 단일 컨테이너로 구현**
+```
+TDL/
+│
+├── myapp/
+│   ├── __pycache__/
+│   ├── migrations/
+│   └── templates/
+│       └── myapp/
+│           ├── base.html
+│           ├── index.html
+│           └── update.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+│
+├── __pycache__/
+├── __init__.py
+├── asgi.py
+├── settings.py
+├── urls.py
+├── wsgi.py
+│
+├── db.sqlite3
+├── Dockerfile
+├── manage.py
+└── requirements.txt
+```
 - dockerfile 생성(requirements.txt 사용), DB(sqllite3 사용)
 - **테스트:**
   - docker image build: ```docker build -t tdl .```
