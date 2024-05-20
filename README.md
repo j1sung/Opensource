@@ -82,4 +82,4 @@ TDL2/
   -> 작업관리자(ctrl+shift+esc), 세부정보 메뉴에서 해당 PID 프로세스 작업 종료 후 다시 ```docker-compose up --build``` 실행
   - 포트충돌 오류가 없다면 localhost:3000 접속 시도 -> if 경로 error 발생시 ctrl+c로 종류 후 ```docker-compose up -d --build```로 백그라운드 실행
   -> ```docker-compose exec web python3 manage.py migrate```로 migrate 해줌 -> 다시 localhost:3000 접속시 접속됨!
-  (if 3000포트가 안되면 docker-compose.yml 파일에서 web service ports:에서 3000:8000 -> 8000:8000 변경 후 다시 진행)
+    (if 3000포트가 안되면 docker-compose.yml 파일에서 web service ports:에서 3000:8000 -> 8000:8000 변경 후 다시 진행)
