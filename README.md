@@ -1,10 +1,41 @@
 # Study OpensourceSW
 ### DKU 소프트웨어학과 32202546 안지성
 ### 1. Django 과제 -> TDL(To-do List App) 구현
+```
+TDL/
+│
+├── myapp/
+│   ├── __pycache__/
+│   ├── migrations/
+│   └── templates/
+│       └── myapp/
+│           ├── base.html
+│           ├── index.html
+│           └── update.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+│
+├── TDL/
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│
+├── db.sqlite3
+└── manage.py
+```
   - **테스트:** ```python manage.py runserver``` -> localhost:8000 접속
 
 ### 2. Docker 과제 -> Django To-do List App을 Docker 컨테이너로 구현
 **1) 단일 컨테이너로 구현**
+- 기존 Django 구조에서 Dockerfile, requirements.txt가 추가됨!
 ```
 TDL1/
 │
