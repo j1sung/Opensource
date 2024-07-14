@@ -26,7 +26,7 @@ TDL/
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   ├── wsgi.py
+│   └── wsgi.py
 │
 ├── db.sqlite3
 └── manage.py
@@ -61,7 +61,7 @@ TDL1/
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   ├── wsgi.py
+│   └── wsgi.py
 │
 ├── db.sqlite3
 ├── Dockerfile
@@ -99,7 +99,7 @@ TDL2/
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   ├── wsgi.py
+│   └── wsgi.py
 │
 ├── db.sqlite3
 ├── docker-compose.yml
